@@ -46,12 +46,19 @@ export const StartScreen: React.FC<StartScreenProps> = ({ userName, onStart }) =
                     Get Started
                 </button>
 <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <div className="flex items-start gap-2 text-left">
+                <div className="flex flex-col items-start gap-4 text-left">
                     <Info className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-gray-700">
                         This tool helps you track your ability to perform daily activities.
                         It is <strong>not a medical diagnostic tool</strong>. Always consult
                         healthcare professionals for medical advice.
+                    </p>
+                    <p className="text-sm text-gray-700">
+                        Data is <strong>safely stored on your device</strong>. By using this tool, you agree to our <strong>Terms of Service</strong>{' '}
+                        and <strong>Privacy Policy</strong>.
+                    </p>
+                    <p className="text-sm" style={{ color: '#ffb38a' }}>
+                        Built with ❤️ by AK in dedication to his mother whose journey with dementia.
                     </p>
                 </div>
             </div>
