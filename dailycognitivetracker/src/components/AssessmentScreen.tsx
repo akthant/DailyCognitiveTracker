@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Domain, Answer, AssessmentData } from "../types";
+import { useTranslation } from 'react-i18next';
+import { domains as getDomainsData } from '../data/domains';
+import { LanguageSelector } from './LanguageSelector';
 
 interface AssessmentScreenProps {
   domains: Domain[];
@@ -9,6 +12,7 @@ interface AssessmentScreenProps {
 export const AssessmentScreen: React.FC<AssessmentScreenProps> = ({ domains, onComplete }) => {
   const [currentDomain, setCurrentDomain] = useState<number>(0);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
+  const { i18n, t } = useTranslation();
 
   const handleAnswerChange = (domainId: string, questionId: number, score: number): void => {
     setAnswers({ ...answers, [domainId]: { questionId, score } });
@@ -51,10 +55,10 @@ export const AssessmentScreen: React.FC<AssessmentScreenProps> = ({ domains, onC
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
               <span className="text-sm font-medium text-gray-500">
-                Question {currentDomain + 1} of {domains.length}
+                {t('assessment.questionOf')} {currentDomain + 1} of {domains.length}
               </span>
               <span className="text-sm font-medium text-blue-600">
-                {Math.round(((currentDomain) / domains.length) * 100)}% Complete
+                {Math.round(((currentDomain) / domains.length) * 100)}% {t('assessment.complete')}
               </span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
@@ -69,7 +73,7 @@ export const AssessmentScreen: React.FC<AssessmentScreenProps> = ({ domains, onC
             <div className="text-6xl mb-4">{domain.icons}</div>
             <h2 className="text-2xl font-bold text-gray-800 mb-2">{domain.title}</h2>
             <p className="text-gray-600">
-              Select the option that best describes your current ability
+              {t('assessment.selectOption')}
             </p>
           </div>
           {/* Answer Options */}
@@ -105,13 +109,13 @@ export const AssessmentScreen: React.FC<AssessmentScreenProps> = ({ domains, onC
               onClick={handleBack}
               disabled={currentDomain === 0}
               className="flex-1 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:bg-gray-50 transition disabled:bg-gray-100 disabled:text-gray-400">
-              Back
+              {t('assessment.back')}
             </button>
             <button
               onClick={handleNext}
               disabled={!currentAnswer}
               className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition disabled:bg-gray-400 disabled:text-gray-200">
-              {currentDomain === domains.length - 1 ? 'Complete' : 'Next'}
+              {currentDomain === domains.length - 1 ? t('assessment.completeButton') : t('assessment.next')}
             </button>
           </div>
         </div>

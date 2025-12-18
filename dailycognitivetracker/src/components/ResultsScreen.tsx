@@ -1,6 +1,9 @@
 import React from "react";
 import { AlertCircle } from "lucide-react";
 import { AssessmentData, Domain } from "../types";
+import { useTranslation } from 'react-i18next';
+import { domains as getDomainsData } from '../data/domains';
+import { LanguageSelector } from './LanguageSelector';
 
 interface ResultsScreenProps {
     assessmentData: AssessmentData;
@@ -12,6 +15,7 @@ export const ResultsScreen: React.FC<ResultsScreenProps> = ({ assessmentData, do
     const totalScore = assessmentData.totalScore;
     const maxScore = domains.length;
     const percentage = (totalScore / maxScore) * 100;
+    const { i18n, t } = useTranslation();
 
     interface StatusInfo {
         color: string;
@@ -26,24 +30,24 @@ export const ResultsScreen: React.FC<ResultsScreenProps> = ({ assessmentData, do
             return {
                 color: "text-green-600",
                 bgColor: "bg-emerald-100",
-                title: "High Independence",
-                message: "You are managing daily activities well. Please continue to monitor your abilities and maintain healthy habits.",
+                title: t('results.highIndependence'),
+                message: t('results.highMessage'),
                 icon: "✅"
             };
         } else if (percentage >= 50) {
             return {
                 color: "text-yellow-600",
                 bgColor: "bg-yellow-100",
-                title: "Moderate Independence",
-                message: "You may need some assistance with daily living activities. Please consider discussing any challenges with family members or healthcare professionals.",
+                title: t('results.moderateIndependence'),
+                message: t('results.moderateMessage'),
                 icon: "⚠️"
             };
         } else {
             return {
                 color: "text-red-600",
                 bgColor: "bg-red-100",
-                title: "Needs Support",
-                message: "You likely require significant support for daily living activities. We recommend consulting with a healthcare professional to discuss your needs.",
+                title: t('results.needsSupport'),
+                message: t('results.supportMessage'),
                 icon: "❗"
             };
         }
@@ -57,19 +61,19 @@ export const ResultsScreen: React.FC<ResultsScreenProps> = ({ assessmentData, do
                 <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
                     <div className="text-center mb-8">
                         <div className="text-6xl mb-4">{statusInfo.icon}</div>
-                        <h1 className="text-3xl font-bold text-gray-800 mb-2">Assessment Complete</h1>
-                        <p className="text-gray-600">Here are your results</p>
+                        <h1 className="text-3xl font-bold text-gray-800 mb-2">{t('results.title')}</h1>
+                        <p className="text-gray-600">{t('results.subtitle')}</p>
                     </div>
                     <div className={`bg-linear-to-r ${statusInfo.bgColor} rounded-xl p-6 text-gray mb-6`}>
                        <div className="text-center">
-                            <p className="text-sm mb-2 text-gray-800">Your Score</p>
+                            <p className="text-sm mb-2 text-gray-800">{t('results.yourScore')}</p>
                             <p className="text-5xl font-bold mb-2 text-gray-900">{totalScore}/{maxScore}</p>
                             <p className="text-xl font-semibold text-gray-800">{statusInfo.title}</p>
                             <p className="text-sm mt-4 text-gray-700">{statusInfo.message}</p>
                         </div>
                     </div>
                     <div className="space-y-4 mb-8">
-                        <h3 className="font-semibold text-gray-800 text-lg">Scores by Category:</h3>
+                        <h3 className="font-semibold text-gray-800 text-lg">{t('results.scoresByCategory')}:</h3>
                         {domains.map(domain => {
                             const score = assessmentData.scores[domain.id];
                             const isFullScore = score === 1;
@@ -81,7 +85,7 @@ export const ResultsScreen: React.FC<ResultsScreenProps> = ({ assessmentData, do
                                     </div>
                                     <div className={`px-3 py-1 rounded-full text-sm font-semibold ${isFullScore ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
                                         }`}>
-                                        {isFullScore ? 'Independent' : 'Needs Support'}
+                                        {isFullScore ? t('results.independent') : t('results.needsSupport')}
                                     </div>
                                 </div>
                             );
@@ -92,26 +96,26 @@ export const ResultsScreen: React.FC<ResultsScreenProps> = ({ assessmentData, do
                             onClick={() => onNavigate('home')}
                             className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition"
                         >
-                            Return to Home
+                            {t('results.returnHome')}
                         </button>
                         <button
                             onClick={() => onNavigate('history')}
                             className="w-full border-2 border-blue-600 text-blue-600 py-3 rounded-xl font-semibold hover:bg-blue-50 transition">
 
-                            View History & Trends
+                            {t('results.viewHistory')}
                         </button>
                     </div>
                 </div>
                 <div className="bg-white rounded-2xl shadow-xl p-6">
                     <h3 className="font-semibold text-gray-800 text-lg mb-3 flex items-center gap-2">
                         <AlertCircle className="w-5 h-5 text-blue-600" />
-                        What Should You Do Next?
+                        {t('results.nextStepsTitle')}
                     </h3>
                     <div className="space-y-3 text-gray-700 text-left">
-                        <p>• <strong>Share these results</strong> with family members or caregivers</p>
-                        <p>• <strong>Track changes over time</strong> by taking regular assessments</p>
-                        <p>• <strong>Consult a healthcare professional</strong> if you notice concerning declines</p>
-                        <p>• <strong>Stay active</strong> physically, mentally, and socially</p>
+                        <p>• <strong>{t('results.nextSteps.share')}</strong></p>
+                        <p>• <strong>{t('results.nextSteps.track')}</strong></p>
+                        <p>• <strong>{t('results.nextSteps.consult')}</strong></p>
+                        <p>• <strong>{t('results.nextSteps.stayActive')}</strong></p>
                     </div>
                 </div>
             </div>

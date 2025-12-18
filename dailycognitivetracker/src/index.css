@@ -1,1 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', 'Noto Sans', 'Noto Sans SC', 'Noto Sans Myanmar', 
+                 'Noto Sans Thai', system-ui, -apple-system, sans-serif;
+  }
+  
+  html[lang="en"] body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  html[lang="mi"] body {
+    font-family: 'Noto Sans', 'Inter', system-ui, sans-serif;
+    font-feature-settings: "kern" 1;
+  }
+  
+  html[lang="zh"] body {
+    font-family: 'Noto Sans SC', sans-serif;
+  }
+  
+  html[lang="my"] body {
+    font-family: 'Noto Sans Myanmar', sans-serif;
+  }
+  
+  html[lang="th"] body {
+    font-family: 'Noto Sans Thai', sans-serif;
+  }
+}

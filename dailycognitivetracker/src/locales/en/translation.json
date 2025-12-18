@@ -1,0 +1,175 @@
+{
+  "app": {
+    "title": "Daily Living Activities Tracker",
+    "subtitle": "Monitor your independence in everyday activities"
+  },
+  "start": {
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "getStarted": "Get Started",
+    "disclaimer": "This tool enables you to monitor & track your aging loved one's ability to perform daily activities. It is <strong>not a medical diagnostic tool</strong>. Always consult healthcare professionals for medical advice.",
+    "privacy": "Your data is <strong>securely stored on your device's browser and will be erased when you clear your browsing data.</strong> By using this tool, you agree to our <strong>Terms of Service</strong> and <strong>Privacy Policy</strong>."
+  },
+  "home": {
+    "welcome": "Welcome,",
+    "trackActivities": "Track your daily living activities",
+    "currentScore": "Current Score",
+    "lastAssessment": "Last Assessment",
+    "takeNewAssessment": "Take New Assessment",
+    "startFirstAssessment": "Start First Assessment",
+    "viewHistory": "View History & Trends",
+    "viewDetails": "View Current Scores by Category",
+    "aboutTitle": "About This Tool",
+    "aboutDescription": "This tracker helps you monitor your ability to perform eight essential daily activities:",
+    "importantReminder": "Important Reminder",
+    "disclaimerPoints": {
+      "notDiagnostic": "This is NOT a diagnostic tool and it cannot replace professional medical evaluation.",
+      "earlyAwareness": "It is designed for early awareness and monitoring and results should be discussed with healthcare providers.",
+      "familyObservation": "Most valuable when combined with family/friend observations."
+    }
+  },
+  "assessment": {
+    "questionOf": "Question",
+    "complete": "Complete",
+    "selectOption": "Select the option that best describes your current ability",
+    "back": "Back",
+    "next": "Next",
+    "completeButton": "Complete"
+  },
+  "domains": {
+    "telephone": {
+      "title": "Using the Telephone",
+      "questions": {
+        "1": "Can look up and dial phone numbers independently",
+        "2": "Can dial a few well-known numbers",
+        "3": "Can answer phone but does not dial",
+        "4": "Does not use telephone at all"
+      }
+    },
+    "shopping": {
+      "title": "Shopping",
+      "questions": {
+        "1": "Takes care of all shopping independently",
+        "2": "Shops independently for small purchases",
+        "3": "Needs to be accompanied on shopping trips",
+        "4": "Completely unable to shop"
+      }
+    },
+    "meals": {
+      "title": "Food Preparation",
+      "questions": {
+        "1": "Plans, prepares, and serves meals independently",
+        "2": "Prepares meals if supplied with ingredients",
+        "3": "Heats and serves prepared meals",
+        "4": "Needs meals prepared and served"
+      }
+    },
+    "housekeeping": {
+      "title": "Housekeeping",
+      "questions": {
+        "1": "Maintains house alone with occasional help for heavy work",
+        "2": "Performs light daily tasks like dishwashing, bed making",
+        "3": "Performs light tasks but cannot maintain cleanliness",
+        "4": "Needs help with all home maintenance",
+        "5": "Does not participate in housekeeping"
+      }
+    },
+    "laundry": {
+      "title": "Laundry",
+      "questions": {
+        "1": "Does personal laundry completely",
+        "2": "Launders small items like socks",
+        "3": "All laundry must be done by others"
+      }
+    },
+    "transportation": {
+      "title": "Transportation",
+      "questions": {
+        "1": "Travels independently on public transport or drives",
+        "2": "Arranges own travel via taxi",
+        "3": "Travels on public transport when assisted",
+        "4": "Travel limited to taxi/car with assistance",
+        "5": "Does not travel at all"
+      }
+    },
+    "medications": {
+      "title": "Managing Medications",
+      "questions": {
+        "1": "Takes medications correctly and on time independently",
+        "2": "Takes medications if prepared in advance",
+        "3": "Not capable of managing own medication"
+      }
+    },
+    "finances": {
+      "title": "Handling Finances",
+      "questions": {
+        "1": "Manages all financial matters independently",
+        "2": "Manages daily purchases but needs help with banking",
+        "3": "Incapable of handling money"
+      }
+    }
+  },
+  "results": {
+    "title": "Assessment Complete",
+    "subtitle": "Here are your results",
+    "yourScore": "Your Score",
+    "highIndependence": "High Independence",
+    "moderateIndependence": "Moderate Independence",
+    "supportNeeded": "Support Needed",
+    "highMessage": "You are managing daily activities well. Continue to monitor your abilities and maintain healthy habits.",
+    "moderateMessage": "Some activities may require support. Consider discussing any challenges with family members or healthcare providers.",
+    "supportMessage": "Multiple activities show need for assistance. We recommend consulting with a healthcare professional to discuss support options.",
+    "scoresByCategory": "Scores by Category:",
+    "independent": "Independent",
+    "needsSupport": "Needs Support",
+    "returnHome": "Return to Home",
+    "viewHistory": "View History & Trends",
+    "nextStepsTitle": "What Should You Do Next?",
+    "nextSteps": {
+      "share": "Share these results with family members or caregivers",
+      "track": "Track changes over time by taking regular assessments",
+      "consult": "Consult a healthcare professional if you notice concerning declines",
+      "stayActive": "Stay active physically, mentally, and socially"
+    }
+  },
+  "history": {
+    "title": "Assessment History",
+    "backToHome": "Back to Home",
+    "noHistory": "No assessment history yet",
+    "takeFirst": "Take Your First Assessment",
+    "improvingTrend": "Improving Trend",
+    "decliningTrend": "Declining Trend",
+    "stable": "Stable",
+    "improvingMessage": "Your scores are improving over time",
+    "decliningMessage": "Consider discussing this with a healthcare provider",
+    "stableMessage": "Your scores are remaining consistent",
+    "totalScore": "Total Score"
+  },
+  "details": {
+    "title": "Assessment Details",
+    "assessmentDate": "Assessment Date:",
+    "totalScore": "Total Score:",
+    "yourResponse": "Your Response:",
+    "recommendation": "Recommendation",
+    "recommendationText": "Consider discussing support options for this activity with family members or healthcare providers.",
+    "aboutTitle": "About Your Assessment",
+    "aboutText1": "This assessment is based on the Lawton Instrumental Activities of Daily Living (IADL) Scale, a validated tool used by healthcare professionals to evaluate functional independence.",
+    "aboutText2": "Regular assessments can help you track changes over time. If you notice a decline in multiple areas, consider scheduling a consultation with your healthcare provider.",
+    "returnHome": "Return to Home"
+  },
+  "status": {
+    "highIndependence": "High Independence",
+    "moderateIndependence": "Moderate Independence",
+    "needsSupport": "Needs Support"
+  },
+  "activities": [
+    "Using the telephone",
+    "Shopping",
+    "Preparing food",
+    "Housekeeping",
+    "Doing laundry",
+    "Transportation",
+    "Managing medications",
+    "Handling finances"
+  ]
+}

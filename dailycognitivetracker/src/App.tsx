@@ -10,28 +10,46 @@ import { AssessmentScreen } from './components/AssessmentScreen';
 import { HistoryScreen } from './components/HistoryScreen';
 import { DetailsScreen } from './components/DetailsScreen';
 import { ResultsScreen } from './components/ResultsScreen';
+import { useTranslation } from 'react-i18next';
+import { domains as getDomainsData } from './data/domains';
+import { LanguageSelector } from './LanguageSelector';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewType>('start');
   const [userName, setUserName] = useState<string>('');
   const [assessmentData, setAssessmentData] = useState<AssessmentData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const { i18n, t } = useTranslation();
+   // Call the domains function with translation function
+  const domains = getDomainsData(t);
 
-
-
-  const initializeApp = async (): Promise<void> => {
-    const name = await loadUserName();
-    const data = await loadAssessmentData();
-    if (name) setUserName(name);
-    if (data) setAssessmentData(data);
-    setIsLoading(false);
-
-    if (name) {
-      setCurrentView('home');
-    }
-  };
+  // Update HTML lang attribute when language changes
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
 
   useEffect(() => {
+    const initializeApp = async (): Promise<void> => {
+      try {
+        // Load saved language preference
+        const savedLanguage = await window.localStorage?.getItem('language');
+        if (savedLanguage && i18n.language !== savedLanguage) {
+          await i18n.changeLanguage(savedLanguage);
+        }
+        const name = await loadUserName();
+        const data = await loadAssessmentData();
+        if (name) setUserName(name);
+        if (data) setAssessmentData(data);
+        setIsLoading(false);
+
+        if (name) {
+          setCurrentView('home');
+        }
+      } catch (error) {
+        console.error('Error during initialization:', error);
+        setIsLoading(false);
+      }
+    };
     initializeApp();
   }, []);
 
@@ -39,7 +57,7 @@ const App: React.FC = () => {
     setUserName(name);
     await saveUserName(name);
     setCurrentView('home');
-    toast.success(`Welcome, ${name}!`);
+    toast.success(`${t('home.welcome')}, ${name}!`);
   };
   const handleAssessmentComplete = async (assessment: AssessmentData): Promise<void> => {
     setAssessmentData(assessment);
@@ -91,7 +109,7 @@ const App: React.FC = () => {
           onNavigate={setCurrentView}
         />
       )}
-       {currentView === 'results' && assessmentData && (
+      {currentView === 'results' && assessmentData && (
         <ResultsScreen
           assessmentData={assessmentData}
           domains={domains}

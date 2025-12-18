@@ -1,0 +1,175 @@
+{
+  "app": {
+    "title": "Kaitātari Pūkenga Oranga ā-Rā",
+    "subtitle": "Aroturuki i tō motuhake ki ngā mahi o ia rā"
+  },
+  "start": {
+    "nameLabel": "Tō Ingoa",
+    "namePlaceholder": "Tāuru i tō ingoa",
+    "getStarted": "Tīmata",
+    "disclaimer": "Ko tēnei taputapu hei āwhina i a koe ki te aroturuki i ō pūkenga mahi ā-rā. <strong>Ehara tēnei i te taputapu tātari hauora</strong>. Me kōrero tonu ki ngā tohunga hauora mō ngā tohutohu hauora.",
+    "privacy": "Kei te <strong>tiakina haumaru ō raraunga i runga i te pūtirotiro o tō pūrere, ā, ka mukua ina muku e koe ō raraunga pūtirotiro.</strong> Mā te whakamahi i tēnei taputapu, e whakaae ana koe ki ā mātou <strong>Ngā Kaupapa Ratonga</strong> me te <strong>Ngā Kaupapa Here Matatapu</strong>."
+  },
+  "home": {
+    "welcome": "Kia Ora,",
+    "trackActivities": "Aroturuki i ō pūkenga oranga ā-rā",
+    "currentScore": "Kaute o Nāianei",
+    "lastAssessment": "Aromatawai Whakamutunga",
+    "takeNewAssessment": "Mahia he Aromatawai Hōu",
+    "startFirstAssessment": "Tīmata i te Aromatawai Tuatahi",
+    "viewHistory": "Tirohia te Hītori me ngā Ia",
+    "viewDetails": "Tirohia ngā Kaute o Nāianei mā te Wāhanga",
+    "aboutTitle": "Mō tēnei Taputapu",
+    "aboutDescription": "Ko tēnei kaitātari hei āwhina i a koe ki te aroturuki i ō pūkenga ki te mahi i ngā mahi nui e waru o ia rā:",
+    "importantReminder": "Whakamōhiotanga Nui",
+    "disclaimerPoints": {
+      "notDiagnostic": "KĀORE tēnei i te taputapu tātari, ā, kāore e taea te whakakapinga i te aromatawai hauora ngaio.",
+      "earlyAwareness": "Kua hoahoatia mō te mōhiotanga moata me te aroturuki, ā, me kōrero ngā hua ki ngā kaiwhakarato hauora.",
+      "familyObservation": "He nui ake te painga ina whakamahia tahi me ngā tiro a te whānau/hoa."
+    }
+  },
+  "assessment": {
+    "questionOf": "Pātai",
+    "complete": "Kua Oti",
+    "selectOption": "Kōwhiria te kōwhiringa e tino whakamārama pai ana i tō pūkenga o nāianei",
+    "back": "Hoki",
+    "next": "Panuku",
+    "completeButton": "Whakaoti"
+  },
+  "domains": {
+    "telephone": {
+      "title": "Te Whakamahi Waea",
+      "questions": {
+        "1": "Ka taea te rapu me te waea i ngā nama waea, ko ia anake",
+        "2": "Ka taea te waea i ētahi nama e mōhiotia ana",
+        "3": "Ka taea te whakautu waea engari kāore e waea atu",
+        "4": "Kāore e whakamahia te waea"
+      }
+    },
+    "shopping": {
+      "title": "Te Hoko",
+      "questions": {
+        "1": "Ka taea te tiaki i ngā hiahia hoko katoa, ko ia anake",
+        "2": "Ka taea te hoko taonga iti, ko ia anake",
+        "3": "Me haere tahi i ngā haerenga hoko katoa",
+        "4": "Kāore rawa e taea te hoko"
+      }
+    },
+    "meals": {
+      "title": "Te Whakariterite Kai",
+      "questions": {
+        "1": "Ka taea te whakamahere, te tunu, me te tuku kai tōtika, ko ia anake",
+        "2": "Ka taea te whakariterite kai tōtika mēnā kua tukuna ngā kai",
+        "3": "Ka taea te whakawerawera me te tuku kai kua oti te hanga",
+        "4": "Me whakariterite me te tuku te kai e ētahi atu"
+      }
+    },
+    "housekeeping": {
+      "title": "Ngā Mahi Whare",
+      "questions": {
+        "1": "Ka taea te tiaki i te whare ko ia anake me te āwhina wā anō mō ngā mahi taimaha",
+        "2": "Ka taea ngā mahi māmā o ia rā pērā i te horoi rihi, te whakatakoto moenga",
+        "3": "Ka taea ngā mahi māmā engari kāore e taea te pupuri i te paratanga e pai ana",
+        "4": "Me āwhina i ngā mahi tiaki whare katoa",
+        "5": "Kāore e whai wāhi ki ngā mahi tiaki whare"
+      }
+    },
+    "laundry": {
+      "title": "Te Horoi Kākahu",
+      "questions": {
+        "1": "Ka taea te horoi kākahu whaiaro katoa, ko ia anake",
+        "2": "Ka taea te horoi taonga iti pērā i ngā tōkena",
+        "3": "Me horoia ngā kākahu katoa e ētahi atu"
+      }
+    },
+    "transportation": {
+      "title": "Te Tere Waka",
+      "questions": {
+        "1": "Ka haere motuhake i runga i ngā waka tūmatanui, ka taraiwa rānei i tōna ake waka",
+        "2": "Ka whakarite i ōna ake haerenga mā te tekihi",
+        "3": "Ka haere i runga i ngā waka tūmatanui me te āwhina",
+        "4": "Ko te haere he iti noa iho ki te tekihi, ki te waka rānei me te āwhina",
+        "5": "Kāore rawa e haere"
+      }
+    },
+    "medications": {
+      "title": "Te Whakahaere Rongoā",
+      "questions": {
+        "1": "Ka taea te kawe haepapa mō te inu rongoā i te wā tika me te rahinga tika, ko ia anake",
+        "2": "Ka taea te kawe haepapa mēnā kua whakaritea te rongoā i mua",
+        "3": "Kāore e taea te whakahaere i ōna ake rongoā"
+      }
+    },
+    "finances": {
+      "title": "Te Whakahaere Pūtea",
+      "questions": {
+        "1": "Ka taea te whakahaere i ngā take pūtea katoa, ko ia anake",
+        "2": "Ka taea te whakahaere i ngā hoko o ia rā engari me āwhina ki ngā mahi pēke",
+        "3": "Kāore e taea te whakahaere moni"
+      }
+    }
+  },
+  "results": {
+    "title": "Kua Oti te Aromatawai",
+    "subtitle": "Koinei ō hua",
+    "yourScore": "Tō Kaute",
+    "highIndependence": "Motuhake Teitei",
+    "moderateIndependence": "Motuhake Waenga",
+    "supportNeeded": "Me Tautoko",
+    "highMessage": "Kei te pai tō whakahaere i ngā mahi o ia rā. Haere tonu ki te aroturuki i ō pūkenga me te pupuri i ngā tikanga hauora pai.",
+    "moderateMessage": "Ka hiahia pea ētahi mahi ki te tautoko. Whiriwhiria ngā wero ki ngā mema whānau, ki ngā kaiwhakarato hauora rānei.",
+    "supportMessage": "He maha ngā mahi e whakaatu ana he āwhina e hiahiatia ana. Ka tūtohu mātou kia kōrero ki tētahi tohunga hauora mō ngā kōwhiringa tautoko.",
+    "scoresByCategory": "Ngā Kaute mā te Wāhanga:",
+    "independent": "Motuhake",
+    "needsSupport": "Me Tautoko",
+    "returnHome": "Hoki ki te Kāinga",
+    "viewHistory": "Tirohia te Hītori me ngā Ia",
+    "nextStepsTitle": "Me Aha Koe ā Muri Ake?",
+    "nextSteps": {
+      "share": "Tohaina ēnei hua ki ngā mema whānau, ki ngā kaitiaki rānei",
+      "track": "Aroturuki i ngā rerekētanga i te wā e haere ana mā te aromatawai i ia wā",
+      "consult": "Kōrero ki tētahi tohunga hauora mēnā ka kite koe i ngā hekenga e awangawanga ana",
+      "stayActive": "Kia hohoro tonu te tinana, te hinengaro me te pāpori"
+    }
+  },
+  "history": {
+    "title": "Hītori Aromatawai",
+    "backToHome": "Hoki ki te Kāinga",
+    "noHistory": "Kāore anō kia aromatawaitia",
+    "takeFirst": "Mahia tō Aromatawai Tuatahi",
+    "improvingTrend": "Ia Whakapai",
+    "decliningTrend": "Ia Heke",
+    "stable": "Pūmau",
+    "improvingMessage": "Kei te whakapai ake ō kaute i te wā e haere ana",
+    "decliningMessage": "Whiriwhiria tēnei ki te kaiwhakarato hauora",
+    "stableMessage": "Kei te pūmau tonu ō kaute",
+    "totalScore": "Kaute Katoa"
+  },
+  "details": {
+    "title": "Taipitopito Aromatawai",
+    "assessmentDate": "Rā Aromatawai:",
+    "totalScore": "Kaute Katoa:",
+    "yourResponse": "Tō Whakautu:",
+    "recommendation": "Tūtohunga",
+    "recommendationText": "Whiriwhiria ngā kōwhiringa tautoko mō tēnei mahi ki ngā mema whānau, ki ngā kaiwhakarato hauora rānei.",
+    "aboutTitle": "Mō Tō Aromatawai",
+    "aboutText1": "Kei runga i te Lawton Instrumental Activities of Daily Living (IADL) Scale tēnei aromatawai, he taputapu kua whakamanahia e ngā tohunga hauora hei aromatawai i te motuhake whakahaere.",
+    "aboutText2": "Ka āwhina ngā aromatawai auau i a koe ki te aroturuki i ngā rerekētanga i te wā e haere ana. Mēnā ka kite koe i te hekenga i ngā wāhanga maha, whiriwhiria te whakarite hui ki tō kaiwhakarato hauora.",
+    "returnHome": "Hoki ki te Kāinga"
+  },
+  "status": {
+    "highIndependence": "Motuhake Teitei",
+    "moderateIndependence": "Motuhake Waenga",
+    "needsSupport": "Me Tautoko"
+  },
+  "activities": [
+    "Te whakamahi waea",
+    "Te hoko",
+    "Te whakariterite kai",
+    "Ngā mahi whare",
+    "Te horoi kākahu",
+    "Te tere waka",
+    "Te whakahaere rongoā",
+    "Te whakahaere pūtea"
+  ]
+}

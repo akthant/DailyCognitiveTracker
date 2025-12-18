@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Calendar, TrendingUp, TrendingDown, Minus } from 'lucide-react';
 import { AssessmentData, Domain } from '../types';
 import { loadAssessmentHistory } from '../utils/storage';
+import { useTranslation } from 'react-i18next';
+import { domains as getDomainsData } from '../data/domains';
+import { LanguageSelector } from './LanguageSelector';
+
 interface HistoryScreenProps {
     domains: Domain[];
     onNavigate: (view: 'home' | 'assessment') => void;
@@ -12,6 +16,7 @@ export const HistoryScreen: React.FC<HistoryScreenProps> = ({
 }) => {
     const [history, setHistory] = useState<AssessmentData[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
+    const { i18n, t } = useTranslation();
       const loadHistory = async (): Promise<void> => {
         const data = await loadAssessmentHistory();
         setHistory(data);
@@ -42,23 +47,23 @@ export const HistoryScreen: React.FC<HistoryScreenProps> = ({
             <div className="max-w-4xl mx-auto">
                 <div className="bg-white rounded-2xl shadow-xl p-8">
                     <div className="flex items-center justify-between mb-6">
-                        <h1 className="text-3xl font-bold text-gray-800">Assessment History</h1>
+                        <h1 className="text-3xl font-bold text-gray-800">{t('history.title')}</h1>
                         <button
                             onClick={() => onNavigate('home')}
                             className="px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-lg transition"
                         >
-                            Back to Home
+                            {t('history.backToHome')}
                         </button>
                     </div>
                     {history.length === 0 ? (
                         <div className="text-center py-12">
                             <Calendar className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                            <p className="text-gray-600 mb-4">No assessment history yet</p>
+                            <p className="text-gray-600 mb-4">{t('history.noHistory')}</p>
                             <button
                                 onClick={() => onNavigate('assessment')}
                                 className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
                             >
-                                Take Your First Assessment
+                                {t('history.takeFirstAssessment')}
                             </button>
                         </div>
                     ) : (
@@ -72,13 +77,13 @@ export const HistoryScreen: React.FC<HistoryScreenProps> = ({
                                     {trend === 'stable' && <Minus className="w-6 h-6 text-blue-600" />}
                                     <div>
                                         <p className="font-semibold text-gray-800">
-                                            {trend === 'improving' ? 'Improving Trend' :
-                                                trend === 'declining' ? 'Declining Trend' : 'Stable'}
+                                            {trend === 'improving' ? t('history.improvingTrend') :
+                                                trend === 'declining' ? t('history.decliningTrend') : t('history.stableTrend')}
                                         </p>
                                         <p className="text-sm text-gray-600">
-                                            {trend === 'improving' ? 'Your scores are improving over time' :
-                                                trend === 'declining' ? 'Consider discussing this with a healthcare provider' :
-                                                    'Your scores are remaining consistent'}
+                                            {trend === 'improving' ? t('history.improvingDescription') :
+                                                trend === 'declining' ? t('history.decliningDescription') :
+                                                    t('history.stableDescription')}
                                         </p>
                                     </div>
                                 </div>
@@ -104,7 +109,7 @@ export const HistoryScreen: React.FC<HistoryScreenProps> = ({
                                             </div>
                                             <div className="text-right">
                                                 <p className="text-3xl font-bold text-blue-600">{assessment.totalScore}/8</p>
-                                                <p className="text-sm text-gray-600">Total Score</p>
+                                                <p className="text-sm text-gray-600">{t('history.totalScore')}</p>
                                             </div>
                                         </div>
                                         <div className="grid grid-cols-4 gap-2">

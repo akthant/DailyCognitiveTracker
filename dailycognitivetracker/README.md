@@ -164,49 +164,35 @@ Visit `http://localhost:5173` in your browser.
 ## 📁 Project Structure
 
 ```
-./src
-├── App.tsx
-├── App.css
-├── main.tsx
-├── index.css
-├── assets/
-│   └── react.svg
-├── components/
-│   ├── common/
-│   │   ├── Header.tsx
-│   │   ├── Sidebar.tsx
-│   │   └── Footer.tsx
-│   ├── cognitive/
-│   │   ├── MemoryTest.tsx
-│   │   ├── AttentionTest.tsx
-│   │   └── ReactionTimeTest.tsx
-│   ├── dashboard/
-│   │   ├── Dashboard.tsx
-│   │   ├── PerformanceChart.tsx
-│   │   └── StatisticsCard.tsx
-│   └── analytics/
-│       ├── Analytics.tsx
-│       ├── TrendChart.tsx
-│       └── HistoryView.tsx
-├── contexts/
-│   └── CognitiveContext.tsx
-├── hooks/
-│   ├── useCognitiveData.ts
-│   └── usePerformanceMetrics.ts
-├── pages/
-│   ├── Home.tsx
-│   ├── Tests.tsx
-│   ├── Analytics.tsx
-│   └── Settings.tsx
-├── services/
-│   ├── api.ts
-│   ├── storage.ts
-│   └── analytics.ts
-├── types/
-│   └── index.ts
-└── utils/
-    ├── helpers.ts
-    └── constants.ts
+dailycognitivetracker/
+├── index.html
+├── package.json
+├── README.md
+├── eslint.config.js
+├── vite.config.ts
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+├── public/
+├── src/
+│   ├── main.tsx
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   ├── assets/
+│   ├── components/
+│   │   ├── AssessmentScreen.tsx
+│   │   ├── DetailsScreen.tsx
+│   │   ├── HistoryScreen.tsx
+│   │   ├── HomeScreen.tsx
+│   │   ├── ResultsScreen.tsx
+│   │   └── StartScreen.tsx
+│   ├── data/
+│   │   └── domains.ts
+│   ├── types/
+│   │   └── index.ts
+│   └── utils/
+│       └── storage.ts
 ```
 
 ## 🔌 API Integration

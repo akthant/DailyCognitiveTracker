@@ -1,0 +1,175 @@
+{
+  "app": {
+    "title": "日常生活技能追踪器",
+    "subtitle": "监测您在日常活动中的独立性"
+  },
+  "start": {
+    "nameLabel": "您的姓名",
+    "namePlaceholder": "请输入姓名",
+    "getStarted": "开始",
+    "disclaimer": "此工具可帮助您追踪执行日常活动的能力。它<strong>不是医疗诊断工具</strong>。请始终咨询医疗保健专业人员以获取医疗建议。",
+    "privacy":"您的数据<strong>安全地存储在您设备的浏览器中，并将在您清除浏览数据时被删除。</strong>使用此工具即表示您同意我们的<strong>服务条款</strong>和<strong>隐私政策</strong>。"
+  },
+  "home": {
+    "welcome": "欢迎，",
+    "trackActivities": "追踪您的日常生活技能",
+    "currentScore": "当前分数",
+    "lastAssessment": "最近评估",
+    "takeNewAssessment": "进行新评估",
+    "startFirstAssessment": "开始第一次评估",
+    "viewHistory": "查看历史和趋势",
+    "viewDetails": "按类别查看当前分数",
+    "aboutTitle": "关于此工具",
+    "aboutDescription": "此追踪器可帮助您监测执行八项基本日常活动的能力：",
+    "importantReminder": "重要提醒",
+    "disclaimerPoints": {
+      "notDiagnostic": "这不是诊断工具，不能代替专业医疗评估。",
+      "earlyAwareness": "它专为早期意识和监测而设计，结果应与医疗保健提供者讨论。",
+      "familyObservation": "与家人/朋友的观察相结合时最有价值。"
+    }
+  },
+  "assessment": {
+    "questionOf": "问题",
+    "complete": "完成",
+    "selectOption": "选择最能描述您当前能力的选项",
+    "back": "返回",
+    "next": "下一步",
+    "completeButton": "完成"
+  },
+  "domains": {
+    "telephone": {
+      "title": "使用电话",
+      "questions": {
+        "1": "能够独立查找和拨打电话号码",
+        "2": "能够拨打一些熟悉的号码",
+        "3": "能够接听电话但不会拨号",
+        "4": "完全不使用电话"
+      }
+    },
+    "shopping": {
+      "title": "购物",
+      "questions": {
+        "1": "独立处理所有购物需求",
+        "2": "独立购买小件商品",
+        "3": "任何购物行程都需要陪同",
+        "4": "完全无法购物"
+      }
+    },
+    "meals": {
+      "title": "食物准备",
+      "questions": {
+        "1": "独立计划、准备和提供充足的膳食",
+        "2": "如果提供食材可以准备充足的膳食",
+        "3": "加热和提供预制膳食",
+        "4": "需要为其准备和提供膳食"
+      }
+    },
+    "housekeeping": {
+      "title": "家务",
+      "questions": {
+        "1": "独自维护房屋，偶尔需要帮助做重活",
+        "2": "能够完成洗碗、铺床等日常轻便任务",
+        "3": "能够完成轻便任务但无法保持可接受的清洁度",
+        "4": "所有家务维护任务都需要帮助",
+        "5": "不参与任何家务任务"
+      }
+    },
+    "laundry": {
+      "title": "洗衣",
+      "questions": {
+        "1": "完全独立完成个人洗衣",
+        "2": "清洗袜子等小件物品",
+        "3": "所有洗衣必须由他人完成"
+      }
+    },
+    "transportation": {
+      "title": "交通",
+      "questions": {
+        "1": "独立乘坐公共交通工具或驾驶自己的车",
+        "2": "自己安排出租车出行",
+        "3": "在他人协助下乘坐公共交通",
+        "4": "只能在他人协助下乘坐出租车或汽车",
+        "5": "完全不出行"
+      }
+    },
+    "medications": {
+      "title": "药物管理",
+      "questions": {
+        "1": "独立按正确剂量在正确时间服药",
+        "2": "如果提前准备好可以负责服药",
+        "3": "无法独立管理自己的药物"
+      }
+    },
+    "finances": {
+      "title": "财务管理",
+      "questions": {
+        "1": "独立管理所有财务事项",
+        "2": "管理日常购物但需要帮助处理银行业务",
+        "3": "无法处理金钱"
+      }
+    }
+  },
+  "results": {
+    "title": "评估完成",
+    "subtitle": "这是您的结果",
+    "yourScore": "您的分数",
+    "highIndependence": "高度独立",
+    "moderateIndependence": "中等独立",
+    "supportNeeded": "需要支持",
+    "highMessage": "您很好地管理着日常活动。继续监测您的能力并保持健康习惯。",
+    "moderateMessage": "某些活动可能需要支持。考虑与家人或医疗保健提供者讨论任何挑战。",
+    "supportMessage": "多项活动显示需要协助。我们建议咨询医疗保健专业人员讨论支持选项。",
+    "scoresByCategory": "各类别分数：",
+    "independent": "独立",
+    "needsSupport": "需要支持",
+    "returnHome": "返回主页",
+    "viewHistory": "查看历史和趋势",
+    "nextStepsTitle": "接下来应该做什么？",
+    "nextSteps": {
+      "share": "与家人或护理人员分享这些结果",
+      "track": "通过定期评估追踪随时间的变化",
+      "consult": "如果注意到令人担忧的下降，请咨询医疗保健专业人员",
+      "stayActive": "保持身体、精神和社交活跃"
+    }
+  },
+  "history": {
+    "title": "评估历史",
+    "backToHome": "返回主页",
+    "noHistory": "尚无评估历史",
+    "takeFirst": "进行您的第一次评估",
+    "improvingTrend": "改善趋势",
+    "decliningTrend": "下降趋势",
+    "stable": "稳定",
+    "improvingMessage": "您的分数随时间推移有所改善",
+    "decliningMessage": "考虑与医疗保健提供者讨论此问题",
+    "stableMessage": "您的分数保持一致",
+    "totalScore": "总分"
+  },
+  "details": {
+    "title": "评估详情",
+    "assessmentDate": "评估日期：",
+    "totalScore": "总分：",
+    "yourResponse": "您的回答：",
+    "recommendation": "建议",
+    "recommendationText": "考虑与家人或医疗保健提供者讨论此活动的支持选项。",
+    "aboutTitle": "关于您的评估",
+    "aboutText1": "此评估基于Lawton日常生活工具性活动（IADL）量表，这是医疗保健专业人员用于评估功能独立性的经过验证的工具。",
+    "aboutText2": "定期评估可以帮助您追踪随时间的变化。如果您注意到多个领域的下降，请考虑安排与您的医疗保健提供者的咨询。",
+    "returnHome": "返回主页"
+  },
+  "status": {
+    "highIndependence": "高度独立",
+    "moderateIndependence": "中等独立",
+    "needsSupport": "需要支持"
+  },
+  "activities": [
+    "使用电话",
+    "购物",
+    "准备食物",
+    "家务",
+    "洗衣",
+    "交通",
+    "药物管理",
+    "财务管理"
+  ]
+}
