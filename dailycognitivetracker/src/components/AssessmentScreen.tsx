@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Domain, Answer, AssessmentData } from "../types";
 import { useTranslation } from 'react-i18next';
-import { domains as getDomainsData } from '../data/domains';
-import { LanguageSelector } from './LanguageSelector';
 
 interface AssessmentScreenProps {
   domains: Domain[];
@@ -12,7 +10,7 @@ interface AssessmentScreenProps {
 export const AssessmentScreen: React.FC<AssessmentScreenProps> = ({ domains, onComplete }) => {
   const [currentDomain, setCurrentDomain] = useState<number>(0);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
-  const { i18n, t } = useTranslation();
+  const {t } = useTranslation();
 
   const handleAnswerChange = (domainId: string, questionId: number, score: number): void => {
     setAnswers({ ...answers, [domainId]: { questionId, score } });

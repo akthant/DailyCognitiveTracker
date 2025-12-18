@@ -2,9 +2,6 @@ import React from "react";
 import { Calendar, Activity, CheckCircle, Info } from "lucide-react";
 import { AssessmentData } from "../types";
 import { useTranslation } from 'react-i18next';
-import { domains as getDomainsData } from '../data/domains';
-import { LanguageSelector } from './LanguageSelector';
-
 interface HomeScreenProps {
   userName: string;
   assessmentData: AssessmentData | null;
@@ -13,7 +10,7 @@ interface HomeScreenProps {
 export const HomeScreen: React.FC<HomeScreenProps> = ({ userName, assessmentData, onNavigate }) => {
   const totalScore = assessmentData ? Object.values(assessmentData.scores).reduce((sum, score) => sum + score, 0) : 0;
   const maxScore = 8;
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
   const getStatusText = (score: number): string => {
     const percentage = (score / maxScore) * 100;
     if (percentage >= 75) return t('results.highIndependence');

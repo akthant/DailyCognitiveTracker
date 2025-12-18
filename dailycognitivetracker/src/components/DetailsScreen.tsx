@@ -2,9 +2,6 @@ import React from 'react';
 import { Info, ArrowLeft } from 'lucide-react';
 import { AssessmentData, Domain } from '../types';
 import { useTranslation } from 'react-i18next';
-import { domains as getDomainsData } from '../data/domains';
-import { LanguageSelector } from './LanguageSelector';
-
 interface DetailsScreenProps {
     assessmentData: AssessmentData;
     domains: Domain[];
@@ -15,7 +12,7 @@ export const DetailsScreen: React.FC<DetailsScreenProps> = ({
     domains,
     onNavigate
 }) => {
-    const { i18n, t } = useTranslation();
+    const { t } = useTranslation();
     const getQuestionText = (domain: Domain, score: number): string => {
         const question = domain.questions.find(q => q.score === score);
         return question ? question.text : 'Unknown';

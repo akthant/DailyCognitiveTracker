@@ -3,8 +3,6 @@ import { Calendar, TrendingUp, TrendingDown, Minus } from 'lucide-react';
 import { AssessmentData, Domain } from '../types';
 import { loadAssessmentHistory } from '../utils/storage';
 import { useTranslation } from 'react-i18next';
-import { domains as getDomainsData } from '../data/domains';
-import { LanguageSelector } from './LanguageSelector';
 
 interface HistoryScreenProps {
     domains: Domain[];
@@ -16,7 +14,7 @@ export const HistoryScreen: React.FC<HistoryScreenProps> = ({
 }) => {
     const [history, setHistory] = useState<AssessmentData[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const { i18n, t } = useTranslation();
+    const { t } = useTranslation();
       const loadHistory = async (): Promise<void> => {
         const data = await loadAssessmentHistory();
         setHistory(data);

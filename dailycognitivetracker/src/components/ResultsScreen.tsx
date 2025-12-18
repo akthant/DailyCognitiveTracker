@@ -2,8 +2,6 @@ import React from "react";
 import { AlertCircle } from "lucide-react";
 import { AssessmentData, Domain } from "../types";
 import { useTranslation } from 'react-i18next';
-import { domains as getDomainsData } from '../data/domains';
-import { LanguageSelector } from './LanguageSelector';
 
 interface ResultsScreenProps {
     assessmentData: AssessmentData;
@@ -15,7 +13,7 @@ export const ResultsScreen: React.FC<ResultsScreenProps> = ({ assessmentData, do
     const totalScore = assessmentData.totalScore;
     const maxScore = domains.length;
     const percentage = (totalScore / maxScore) * 100;
-    const { i18n, t } = useTranslation();
+    const { t } = useTranslation();
 
     interface StatusInfo {
         color: string;

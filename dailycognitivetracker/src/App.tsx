@@ -2,7 +2,6 @@ import './App.css'
 import { toast } from 'react-hot-toast';
 import React, { useState, useEffect } from 'react';
 import { ViewType, AssessmentData } from './types';
-import { domains } from './data/domains';
 import { loadUserName, saveUserName, loadAssessmentData, saveAssessmentData, loadAssessmentHistory, saveAssessmentHistory } from './utils/storage';
 import { HomeScreen } from './components/HomeScreen';
 import { StartScreen } from './components/StartScreen';
@@ -12,7 +11,6 @@ import { DetailsScreen } from './components/DetailsScreen';
 import { ResultsScreen } from './components/ResultsScreen';
 import { useTranslation } from 'react-i18next';
 import { domains as getDomainsData } from './data/domains';
-import { LanguageSelector } from './LanguageSelector';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewType>('start');
