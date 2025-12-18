@@ -2,6 +2,7 @@ import React from "react";
 import { Calendar, Activity, CheckCircle, Info } from "lucide-react";
 import { AssessmentData } from "../types";
 import { useTranslation } from 'react-i18next';
+import { Analytics } from "@vercel/analytics/react"; // Import the Analytics component
 interface HomeScreenProps {
   userName: string;
   assessmentData: AssessmentData | null;
@@ -22,6 +23,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ userName, assessmentData
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+      <Analytics /> {/* Add the component here */}
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
           <div className="flex items-center justify-between mb-6">
