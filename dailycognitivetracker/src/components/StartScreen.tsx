@@ -74,7 +74,7 @@ export const StartScreen: React.FC<StartScreenProps> = ({ userName, onStart }) =
                         </p>
                         <p className="text-sm" style={{ color: '#B2BEB5' }}>
                             Built with ❤️ for my Mom<br/>
-                            Contact: builtwithlovedev09@outlook.com
+                            builtwithlovedev09@outlook.com
                         </p>
                     </div>
                 </div>
